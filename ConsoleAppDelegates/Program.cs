@@ -4,9 +4,11 @@ namespace ConsoleAppDelegates
 {
     class Program
     {
+        public delegate void Del(string message);
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Del handler = DelegateMethod.DelMethod;
+            handler("Hello World.");
         }
     }
 }
